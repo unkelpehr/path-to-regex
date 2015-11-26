@@ -8,7 +8,7 @@
 
 ## Usage
 
-##### pathToRegex(<`path` = `String`|`RegExp`>*[, `options` = Object]*);
+#### pathToRegex(<`path` = `String`|`RegExp`>*[, `options` = Object]*);
 Turns given `path` into a regular expression
 ```javascript
 pathToRegex('/users/:userId/');
@@ -16,8 +16,12 @@ pathToRegex('/users/:userId/', {
   caseSensitive: true // default: false
 });
 ```
+- **options**
+  - **path** String to be converted into a regular expression.
+      - or, a regular expression to inherit pathToRegex extensions
+  - **caseSensitive** When `true` the matching will be case sensitive.
 
-##### pathToRegex.toFixed(<`path` = `String`);
+#### pathToRegex.toFixed(<`path` = `String`);
 Returns the fixed (static) portion of given `path`
 ```javascript
 pathToRegex.toFixed('/users/:userId/'); //-> /users/
