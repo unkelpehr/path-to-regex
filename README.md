@@ -4,7 +4,7 @@
   - Works completely without hacks, polyfills etc
   - Extensive test suite with 800+ tests
   - No dependencies - one file
-  - Small (~1KB gzipped)
+  - Fast and small (~1KB gzipped)
 
 ## Usage
 
@@ -16,10 +16,13 @@ pathToRegex('/users/:userId/', {
   caseSensitive: true // default: false
 });
 ```
+
+- **path** String to be converted into a regular expression.
+    - *or a regular expression to inherit  custom method `query`*
 - **options**
-  - **path** String to be converted into a regular expression.
-      - or, a regular expression to inherit  custom method `query`
   - **caseSensitive** When `true` the matching will be case sensitive.
+
+**The return value** of pathToRegex is a RegExp object with added properties (explanation down below) 
 
 #### pathToRegex.toFixed(<`path` = `String`);
 Returns the fixed (static) portion of given `path`
