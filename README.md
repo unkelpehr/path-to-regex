@@ -43,16 +43,34 @@ var containsModifiers = pathToRegex.toFixed(path) === path;
 A mandatory capture group
 ```javascript
 var re = pathToRegex('/users/:userId');
+
+re.query('/users/abc')        //-> ['abc']
+re.query('/users/18')         //-> ['18']
+re.query('/users/')           //-> null
+re.query('/users/18/more')    //-> null
 ```
 
 #### :optional?
 An optional capture group
 ```javascript
 var re = pathToRegex('/users/:userId?');
+
+re.query('/users/abc')      //-> ['abc']
+re.query('/users/18')       //-> ['18']
+re.query('/users/')         //-> [undefined]
+re.query('/users/18/more')  //-> null
 ```
 
 #### * (wildcard)
 A zero-or-more modifier
 ```javascript
 var re = pathToRegex('/page/*/update*');
+
+re.query('/page/index/updateStuff') //-> ['index', 'Stuff']
+re.query('/page/updateStuff')       //-> [undefined, 'Stuff']
+re.query('/page/update')            //-> [undefined, undefined]
+re.query('/page/updaate')           //-> null
 ```
+
+#### The returned RegExp
+
