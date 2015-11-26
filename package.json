@@ -1,0 +1,38 @@
+{
+  "private": "true",
+  "public": "false",
+  
+  "name": "path-to-regex2",
+  "description": "",
+  "version": "v1.0.0",
+  "author": "Pehr Boman <unkelpehr@gmail.com>",
+  "homepage": "https://github.com/unkelpehr/path-to-regex",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unkelpehr/path-to-regex.git"
+  },
+  "scripts": {
+    "test": "tape test/tests/*.js"
+  },
+  "testling": {
+    "files": "test/tests/*.js",
+    "browsers": [
+      "ie/6..latest",
+      "chrome/22..latest",
+      "firefox/16..latest",
+      "safari/latest",
+      "opera/11.0..latest",
+      "iphone/6",
+      "ipad/6",
+      "android-browser/latest"
+    ]
+  },
+  "devDependencies": {
+    "benchmark": "^1.0.0",
+    "tape": "^4.2.2"
+  },
+  "keywords": [
+
+  ]
+}
