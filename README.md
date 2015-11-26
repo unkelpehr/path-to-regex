@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/unkelpehr/path-to-regex.svg?branch=master)](https://travis-ci.org/unkelpehr/path-to-regex)
+
 # path-to-regex
 
   - Vanilla browser, AMD & CommonJS compatible
