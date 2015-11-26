@@ -18,7 +18,7 @@ pathToRegex('/users/:userId/', {
 ```
 - **options**
   - **path** String to be converted into a regular expression.
-      - or, a regular expression to inherit pathToRegex extensions
+      - or, a regular expression to inherit  custom method `query`
   - **caseSensitive** When `true` the matching will be case sensitive.
 
 #### pathToRegex.toFixed(<`path` = `String`);
@@ -29,4 +29,7 @@ pathToRegex.toFixed('/users/:userId');  //-> /users
 pathToRegex.toFixed('/:page/');         //-> /
 pathToRegex.toFixed('/i/like/turt*es'); //-> /i/like
 
+var containsModifiers = pathToRegex.toFixed(path) === path;
 ```
+- **options**
+  - **path** String of which to extract the fixed portion from
