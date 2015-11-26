@@ -75,6 +75,6 @@ re.query('/page/updaate')           //-> null
 ### The returned RegExp
 Is a proper RegExp instance but with to properties added:
 - **query**
-  - *Identical to the native RegExp.exec **but** it pops the first mandatory full-match*
+  - *Identical to the native `RegExp.exec`* **but** *it pops the first mandatory full-match*
 - **length** The number of modifiers present in the path
   - *pathToRegexp('/users/:userId?/:action).length => 2*
