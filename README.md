@@ -1,7 +1,7 @@
 # path-to-regex
 
-  - AMD & CommonJS compatible
-  - Works in browser and node completely without hacks, polyfills etc
+  - Vanilla browser, AMD & CommonJS compatible
+  - Works completely without hacks, polyfills etc
   - Extensive test suite with 800+ tests
   - No dependencies - one file
   - Small (~1KB gzipped)
