@@ -33,3 +33,23 @@ var containsModifiers = pathToRegex.toFixed(path) === path;
 ```
 - **options**
   - **path** String of which to extract the fixed portion from
+
+
+### Modifiers
+#### :capture
+A mandatory capture group
+```javascript
+var re = pathToRegex('/users/:userId');
+```
+
+#### :optional?
+An optional capture group
+```javascript
+var re = pathToRegex('/users/:userId?');
+```
+
+#### * (wildcard)
+A zero-or-more modifier
+```javascript
+var re = pathToRegex('/page/*/update*');
+```
